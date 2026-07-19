@@ -27,9 +27,9 @@ export const GET: APIRoute = async ({ props, url }) => {
     return new Response(null, { status: 404, statusText: "Not found" });
   }
 
-  const fonts = fontData["--font-google-sans-code"];
+  const fonts = fontData["--font-cormorant-garamond"];
   const regularFontPath = getFontPathByWeight(fonts, 400);
-  const boldFontPath = getFontPathByWeight(fonts, 700);
+  const boldFontPath = getFontPathByWeight(fonts, 600);
 
   if (regularFontPath === undefined || boldFontPath === undefined) {
     throw new Error("Cannot find the font path.");
@@ -55,6 +55,7 @@ export const GET: APIRoute = async ({ props, url }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          fontFamily: "Cormorant Garamond",
         },
         children: [
           {
@@ -106,7 +107,7 @@ export const GET: APIRoute = async ({ props, url }) => {
                       props: {
                         style: {
                           fontSize: 72,
-                          fontWeight: "bold",
+                          fontWeight: 600,
                           maxHeight: "84%",
                           overflow: "hidden",
                         },
@@ -141,7 +142,7 @@ export const GET: APIRoute = async ({ props, url }) => {
                                   props: {
                                     style: {
                                       overflow: "hidden",
-                                      fontWeight: "bold",
+                                      fontWeight: 600,
                                     },
                                     children: props.data.author,
                                   },
@@ -152,7 +153,7 @@ export const GET: APIRoute = async ({ props, url }) => {
                           {
                             type: "span",
                             props: {
-                              style: { overflow: "hidden", fontWeight: "bold" },
+                              style: { overflow: "hidden", fontWeight: 600 },
                               children: config.site.title,
                             },
                           },
@@ -173,15 +174,15 @@ export const GET: APIRoute = async ({ props, url }) => {
       embedFont: true,
       fonts: [
         {
-          name: "Google Sans Code",
+          name: "Cormorant Garamond",
           data: regularData,
           weight: 400,
           style: "normal",
         },
         {
-          name: "Google Sans Code",
+          name: "Cormorant Garamond",
           data: boldData,
-          weight: 700,
+          weight: 600,
           style: "normal",
         },
       ],

@@ -7,28 +7,36 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --color-accent-strong: var(--accent-strong);
+  --font-heading: var(--font-cormorant-garamond);
+  --font-body: var(--font-lora);
 }
 
-/* Light theme values */
+/* Light theme values — "Classical" design system: warm near-white ground,
+   ink text, single gold/bronze accent. */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #f3f2f2;
+  --foreground: #201f1d;
+  --accent: #b68235;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --muted: #eae9e9;
+  --muted-foreground: #7d7979;
+  --border: color-mix(in srgb, #201f1d 16%, transparent);
+  /* Deeper accent step — enough contrast for small/body-sized accent text,
+     where the base --accent alone would be too light to read comfortably. */
+  --accent-strong: #7d5411;
 }
 
-/* Dark theme values */
+/* Dark theme values — same system, dark ground (from the design's own
+   dark-mode reference). */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #1a1917;
+  --foreground: #ece9e4;
+  --accent: #e1ad66;
+  --accent-foreground: #1a1917;
+  --muted: #26241f;
+  --muted-foreground: color-mix(in srgb, #ece9e4 55%, transparent);
+  --border: color-mix(in srgb, #ece9e4 20%, transparent);
+  --accent-strong: #e6b877;
 }

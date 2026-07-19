@@ -19,6 +19,23 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 600; /* Classical caps interface headings at semibold */
+  }
+  /* Code should stay monospace even though the body font is now serif. */
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family:
+      ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
 }
 
 @utility max-w-app {
@@ -31,6 +48,39 @@
 
 @utility active-nav {
   @apply underline decoration-1 underline-offset-4;
+}
+
+/* ===== Classical-style buttons — outlined, never filled ===== */
+@utility btn {
+  @apply border-border font-heading inline-flex items-center justify-center gap-1.5 rounded-md border px-3.5 py-1.5 text-sm leading-tight font-semibold text-inherit no-underline transition-colors;
+}
+@utility btn-primary {
+  @apply btn border-accent text-accent hover:bg-accent/10 active:bg-accent/20;
+}
+@utility btn-ghost {
+  @apply btn border-transparent px-1.5 text-accent hover:bg-accent/10 active:bg-accent/20;
+}
+@utility btn-secondary {
+  @apply btn hover:bg-foreground/7 active:bg-foreground/14;
+}
+
+/* ===== Classical-style tags — small tinted chips ===== */
+@utility tag {
+  @apply rounded-md px-2.5 py-1 text-xs font-medium whitespace-nowrap no-underline;
+}
+@utility tag-accent {
+  @apply tag bg-accent/12 text-accent;
+}
+@utility tag-neutral {
+  @apply tag bg-foreground/7 text-foreground/70;
+}
+@utility tag-outline {
+  @apply tag border-border text-foreground border;
+}
+
+/* ===== Classical-style "plate" — the matted photo/placeholder wrapper ===== */
+@utility plate {
+  @apply border-muted outline-border block border-6 outline outline-offset-0;
 }
 
 :target {
