@@ -1,0 +1,60 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { toTransitionName } from "@/utils/toTransitionName";
+import Datetime from "./Datetime.astro";
+
+type Props = CollectionEntry<"posts">;
+
+const { id, data, filePath } = Astro.props;
+const { title, description, tags, ...props } = data;
+
+const category = tags?.[0];
+
+// A small, fixed set of warm gradients so the placeholder plates aren't all
+// identical — picked deterministically from the post id, not at random.
+const PLACEHOLDER_GRADIENTS = [
+  "from-accent/20 to-accent/50",
+  "from-accent/15 to-foreground/25",
+  "from-muted-foreground/25 to-accent/35",
+];
+const gradient =
+  PLACEHOLDER_GRADIENTS[
+    Math.abs(
+      [...id].reduce((sum, ch) => sum + ch.charCodeAt(0), 0)
+    ) % PLACEHOLDER_GRADIENTS.length
+  ];
+---
+
+<li class="flex list-none flex-col gap-2">
+  <a
+    href={getPostUrl(id, filePath, Astro.currentLocale)}
+    tabindex="-1"
+    aria-hidden="true"
+    class="plate aspect-4/3 w-full"
+  >
+    <span class:list={["block size-full bg-gradient-to-br", gradient]}></span>
+  </a>
+  <div class="flex items-baseline justify-between gap-2">
+    {
+      category && (
+        <span class="text-accent text-[11px] font-medium tracking-wide uppercase">
+          {category}
+        </span>
+      )
+    }
+    <Datetime pubDatetime={props.pubDatetime} class="text-xs" />
+  </div>
+  <a
+    href={getPostUrl(id, filePath, Astro.currentLocale)}
+    class="hover:text-accent focus-visible:text-accent"
+  >
+    <h3
+      transition:name={toTransitionName(title)}
+      class="text-xl leading-snug font-semibold"
+    >
+      {title}
+    </h3>
+  </a>
+  <p class="text-foreground/80 line-clamp-3 text-sm">{description}</p>
+</li>
