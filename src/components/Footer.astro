@@ -40,6 +40,12 @@ const { site, features } = config;
       >
         Todos os posts
       </a>
+      <a
+        href={getRelativeLocaleUrl(locale, "tags")}
+        class="hover:text-accent w-fit"
+      >
+        Tags
+      </a>
       {
         features.showArchives && (
           <a
