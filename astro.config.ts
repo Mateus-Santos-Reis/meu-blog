@@ -60,8 +60,8 @@ export default defineConfig({
   },
   fonts: [
     {
-      name: "Cormorant Garamond",
-      cssVariable: "--font-cormorant-garamond",
+      name: "Spectral",
+      cssVariable: "--font-spectral",
       provider: fontProviders.google(),
       fallbacks: ["serif"],
       weights: [400, 600],
@@ -69,8 +69,8 @@ export default defineConfig({
       formats: ["woff", "ttf"],
     },
     {
-      name: "Lora",
-      cssVariable: "--font-lora",
+      name: "Source Serif 4",
+      cssVariable: "--font-source-serif-4",
       provider: fontProviders.google(),
       fallbacks: ["serif"],
       weights: [400, 600],

@@ -21,7 +21,9 @@ const { site, features } = config;
   class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
   {...attrs}
 >
-  <div class="border-border grid grid-cols-2 gap-8 border-t pt-8 pb-6 sm:grid-cols-3">
+  <div
+    class="border-border grid grid-cols-2 gap-8 border-t pt-8 pb-6 sm:grid-cols-3"
+  >
     <div class="col-span-2 sm:col-span-1">
       <p class="font-heading text-lg">{site.title}</p>
       <p class="text-muted-foreground mt-2 max-w-[22ch] text-sm">
@@ -32,7 +34,10 @@ const { site, features } = config;
       <span class="text-accent text-[11px] font-medium tracking-wide uppercase">
         Ler
       </span>
-      <a href={getRelativeLocaleUrl(locale, "posts")} class="hover:text-accent w-fit">
+      <a
+        href={getRelativeLocaleUrl(locale, "posts")}
+        class="hover:text-accent w-fit"
+      >
         Todos os posts
       </a>
       {
@@ -45,7 +50,10 @@ const { site, features } = config;
           </a>
         )
       }
-      <a href={getRelativeLocaleUrl(locale, "about")} class="hover:text-accent w-fit">
+      <a
+        href={getRelativeLocaleUrl(locale, "about")}
+        class="hover:text-accent w-fit"
+      >
         Sobre mim
       </a>
     </div>
@@ -60,7 +68,9 @@ const { site, features } = config;
     class="border-border flex flex-col items-center justify-between gap-2 border-t py-4 text-sm sm:flex-row"
   >
     <p class="font-heading text-accent-strong italic">— {site.title}</p>
-    <div class="text-muted-foreground flex flex-col items-center whitespace-nowrap sm:flex-row">
+    <div
+      class="text-muted-foreground flex flex-col items-center whitespace-nowrap sm:flex-row"
+    >
       <span>{t.footer.copyright} &#169; {currentYear}</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
       <span>{t.footer.allRightsReserved}</span>

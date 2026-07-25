@@ -20,9 +20,8 @@ const PLACEHOLDER_GRADIENTS = [
 ];
 const gradient =
   PLACEHOLDER_GRADIENTS[
-    Math.abs(
-      [...id].reduce((sum, ch) => sum + ch.charCodeAt(0), 0)
-    ) % PLACEHOLDER_GRADIENTS.length
+    Math.abs([...id].reduce((sum, ch) => sum + ch.charCodeAt(0), 0)) %
+      PLACEHOLDER_GRADIENTS.length
   ];
 ---
 
