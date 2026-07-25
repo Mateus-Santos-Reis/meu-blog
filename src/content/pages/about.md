@@ -1,37 +1,16 @@
 ---
-title: "About"
-description: "A bit about me and this blog."
+title: "Sobre"
+description: "Sobre este espaço — por que ele existe e o que esperar aqui."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+Eu vivia num mundo que achava que enxergava, e não enxergava nada.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+Teve um professor que mudou isso. Não me deu respostas prontas — me obrigou a pensar até o fim, sem trégua, até não sobrar nenhum lugar confortável pra fugir da conclusão. E quando cheguei lá, descobri que boa parte do que eu tomava como certo era mentira, ou pior: era conforto disfarçado de certeza. Antes eu buscava compreensão. Ele me deu.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+É isso que eu tento fazer aqui.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+Não tenho um assunto fixo. Escrevo sobre um livro, uma notícia, uma música, uma tarde ruim — o que for, desde que eu consiga pensar naquilo até o fim e chegar a algum lugar que resista ao teste, sozinho, depois. Não espere um blog de nicho. Espere alguém pensando em voz alta, com rigor, na sua frente.
 
-## Features
+E não é só sobre ver a verdade — é sobre o que fazer depois de vê-la. Descobrir que se vivia num mundo falso é o tipo de coisa que pode paralisar, ou pode ser exatamente o que te dá força pra continuar, quando tudo parece difícil demais pra valer a pena. Eu acredito na segunda opção. Acho que o bem vence, mesmo quando a situação não parece favorável — e que desistir é a única derrota que é realmente definitiva.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
-
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
-
-and so much more.
-
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+Se alguma coisa aqui te fizer pensar diferente do que pensava antes — ou pelo menos te fizer duvidar se o que você pensava era mesmo seu, ou só emprestado — já valeu a pena escrever.
