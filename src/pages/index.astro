@@ -37,7 +37,9 @@ const topTags = [
     class="app-layout"
   >
     <section id="hero" class="border-border border-b pt-8 pb-6">
-      <p class="text-foreground/80 max-w-prose text-justify text-[15px] hyphens-auto">
+      <p
+        class="text-foreground/80 max-w-prose text-justify text-[15px] hyphens-auto"
+      >
         Sou estudante na Universidade de Brasília (UnB) e atualmente trabalho na
         SIGNA. Por aqui, escrevo sobre o que venho aprendendo e explorando pelo
         caminho.
@@ -49,7 +51,11 @@ const topTags = [
           class="text-muted-foreground hover:text-accent inline-flex items-center gap-1.5 text-sm"
           aria-label="RSS Feed"
         >
-          <IconRss width={16} height={16} class="stroke-current rtl:-rotate-90" />
+          <IconRss
+            width={16}
+            height={16}
+            class="stroke-current rtl:-rotate-90"
+          />
           RSS
         </a>
         {socials.length > 0 && <Socials />}

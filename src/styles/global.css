@@ -58,7 +58,7 @@
   @apply btn border-accent text-accent hover:bg-accent/10 active:bg-accent/20;
 }
 @utility btn-ghost {
-  @apply btn border-transparent px-1.5 text-accent hover:bg-accent/10 active:bg-accent/20;
+  @apply btn text-accent hover:bg-accent/10 active:bg-accent/20 border-transparent px-1.5;
 }
 @utility btn-secondary {
   @apply btn hover:bg-foreground/7 active:bg-foreground/14;

@@ -6,7 +6,7 @@ import { getFontPathByWeight } from "@/utils/getFontPathByWeight";
 import config from "@/config";
 
 export const GET: APIRoute = async context => {
-  const fonts = fontData["--font-cormorant-garamond"];
+  const fonts = fontData["--font-spectral"];
   const regularFontPath = getFontPathByWeight(fonts, 400);
   const boldFontPath = getFontPathByWeight(fonts, 600);
 
@@ -34,7 +34,7 @@ export const GET: APIRoute = async context => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "Cormorant Garamond",
+          fontFamily: "Spectral",
         },
         children: [
           {
@@ -145,13 +145,13 @@ export const GET: APIRoute = async context => {
       embedFont: true,
       fonts: [
         {
-          name: "Cormorant Garamond",
+          name: "Spectral",
           data: regularData,
           weight: 400,
           style: "normal",
         },
         {
-          name: "Cormorant Garamond",
+          name: "Spectral",
           data: boldData,
           weight: 600,
           style: "normal",
