@@ -3,9 +3,10 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://astro-paper.pages.dev/",
-    title: "Mateus Santos Reis",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
+    title: "Desvelo",
+    description:
+      "Ensaios sobre o que se vê quando se para pra pensar até o fim.",
+    author: "Mateus Santos Reis",
     profile: "https://satna.ing",
     ogImage: "default-og.jpg",
     lang: "en",
