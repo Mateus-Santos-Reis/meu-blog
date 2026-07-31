@@ -17,28 +17,33 @@ const locale = Astro.currentLocale ?? config.site.lang;
     Nada de disparo toda semana — só um e-mail curto quando eu publicar algo.
     Cancele quando quiser.
   </p>
-  <form class="mx-auto mt-5 flex max-w-sm gap-2">
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/santos_reis"
+    method="post"
+    target="_blank"
+    class="mx-auto mt-5 flex max-w-sm gap-2"
+  >
     <label class="flex-1">
       <span class="sr-only">Seu e-mail</span>
       <input
         type="email"
+        name="email"
+        id="bd-email"
+        required
         placeholder="seu@email.com"
-        disabled
-        class="border-border placeholder:text-muted-foreground w-full rounded-md border bg-transparent px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-70"
+        class="border-border placeholder:text-muted-foreground w-full rounded-md border bg-transparent px-3 py-2 text-sm"
       />
     </label>
-    <button type="button" disabled class="btn-primary shrink-0 opacity-70">
-      Quero
-    </button>
+    <button type="submit" class="btn-primary shrink-0">Quero</button>
   </form>
   <p class="text-muted-foreground mt-3 text-xs">
-    Em breve por aqui ·{" "}
+    Sem spam, cancele quando quiser ·{" "}
     <a
       href={`${getRelativeLocaleUrl(locale, "")}rss.xml`}
       target="_blank"
       class="text-accent-strong inline-flex items-center gap-1 hover:underline"
     >
-      <IconRss class="size-3.5" /> o RSS já funciona
+      <IconRss class="size-3.5" /> ou acompanhe pelo RSS
     </a>
   </p>
 </section>
