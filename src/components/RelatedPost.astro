@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import Datetime from "./Datetime.astro";
+
+type Props = { post: CollectionEntry<"posts"> };
+
+const { post } = Astro.props;
+const currentTags = new Set(post.data.tags ?? []);
+
+let related: CollectionEntry<"posts"> | undefined;
+
+if (currentTags.size > 0) {
+  const allPosts = getSortedPosts(await getCollection("posts"));
+
+  const candidates = allPosts
+    .filter(p => p.id !== post.id)
+    .map(p => ({
+      post: p,
+      overlap: (p.data.tags ?? []).filter(t => currentTags.has(t)).length,
+    }))
+    .filter(c => c.overlap > 0)
+    .sort(
+      (a, b) =>
+        b.overlap - a.overlap ||
+        b.post.data.pubDatetime.getTime() - a.post.data.pubDatetime.getTime()
+    );
+
+  related = candidates[0]?.post;
+}
+---
+
+{
+  related && (
+    <div class="border-border border-t pt-6">
+      <span class="text-accent text-[11px] font-medium tracking-wide uppercase">
+        Se isso te interessou
+      </span>
+      <a
+        href={getPostUrl(related.id, related.filePath, Astro.currentLocale)}
+        class="hover:text-accent mt-2 block"
+      >
+        <span class="font-heading block text-lg leading-snug font-semibold">
+          {related.data.title}
+        </span>
+      </a>
+      <div class="text-muted-foreground mt-1 flex items-center gap-2 text-xs">
+        <Datetime pubDatetime={related.data.pubDatetime} />
+      </div>
+      <p class="text-foreground/80 mt-1 line-clamp-2 text-sm">
+        {related.data.description}
+      </p>
+    </div>
+  )
+}
